@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const destinos = [
+  { nombre: 'Eje Cafetero', categoria: 'Naturaleza y tradición', descripcion: 'Montañas verdes, palmas de cera y el aroma del mejor café.', imagen: `${base}img/eje-cafetero.jpg`, ruta: 'eje-cafetero' },
+  { nombre: 'Medellín', categoria: 'Ciudad y cultura', descripcion: 'Una ciudad entre montañas que sorprende por su creatividad.', imagen: `${base}img/medellin.jpg`, ruta: 'medellin' },
+  { nombre: 'San Andrés', categoria: 'Sol y mar', descripcion: 'Aguas cristalinas, playas caribeñas y cultura isleña.', imagen: `${base}img/san-andres.jpg`, ruta: 'san-andres' }
+];
+---
+<BaseLayout title="Inicio">
+  <section class="hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(10,29,25,.80), rgba(10,29,25,.20)), url('${base}img/eje-cafetero.jpg')` }}>
+    <div class="container hero-content">
+      <span class="eyebrow light">UNA REVISTA DE VIAJES</span>
+      <h1>Colombia, un país para descubrir.</h1>
+      <p>Tres destinos, tres experiencias y una invitación a explorar la riqueza natural y cultural de nuestro país.</p>
+      <a class="button" href="#destinos">Explorar destinos <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section id="destinos" class="section container">
+    <div class="section-heading">
+      <span class="eyebrow">NUESTROS DESTINOS</span>
+      <h2>Historias que inspiran viajes</h2>
+      <p>De las montañas del interior a las playas del Caribe: tres lugares para conocer Colombia.</p>
+    </div>
+    <div class="card-grid">
+      {destinos.map((destino) => (
+        <article class="destination-card">
+          <a href={`${base}destinos/${destino.ruta}/`} aria-label={`Leer artículo sobre ${destino.nombre}`}>
+            <img src={destino.imagen} alt={`Fotografía de ${destino.nombre}, Colombia`} loading="lazy" />
+            <div class="card-copy"><span class="eyebrow">{destino.categoria}</span><h3>{destino.nombre}</h3><p>{destino.descripcion}</p><span class="read-more">Leer artículo ↗</span></div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

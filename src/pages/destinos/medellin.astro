@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Medellín" description="Descubre los atractivos turísticos de Medellín en Colombia.">
+  <article>
+    <header class="article-hero container">
+      <a class="back-link" href={base}>← Volver al inicio</a>
+      <span class="eyebrow">CIUDAD Y CULTURA</span>
+      <h1>Medellín: cultura, innovación y transformación</h1>
+      <p>Un recorrido por los paisajes, experiencias y tradiciones que hacen especial a este destino colombiano.</p>
+    </header>
+    <div class="container article-photo"><img src={`${base}img/medellin.jpg`} alt="Paisaje de Medellín, Colombia" /></div>
+    <div class="article-body container">
+    <section><h2>Una ciudad rodeada de montañas</h2><p>Medellín, capital de Antioquia, se encuentra en el Valle de Aburrá. Es conocida por su clima templado, su vida cultural y la combinación de espacios urbanos con un paisaje montañoso.</p></section>
+    <section><h2>Lugares para conocer</h2><p>La Plaza Botero reúne esculturas del artista Fernando Botero en pleno centro de la ciudad. La Comuna 13 es reconocida por sus murales, expresiones artísticas y recorridos comunitarios. El sistema Metro y sus metrocables también permiten observar la ciudad desde distintas perspectivas.</p></section>
+    <section><h2>Cultura y gastronomía</h2><p>Medellín ofrece museos, parques, mercados y una amplia oferta gastronómica. Entre los sabores tradicionales se encuentran la arepa antioqueña y la bandeja paisa. Para aprovechar la visita, conviene planificar los recorridos por zonas y respetar la vida cotidiana de los barrios.</p></section>
+      <a class="back-link bottom-link" href={base}>← Explorar otros destinos</a>
+    </div>
+  </article>
+</BaseLayout>

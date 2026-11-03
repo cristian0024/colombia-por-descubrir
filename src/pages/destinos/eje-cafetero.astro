@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Eje Cafetero" description="Descubre los atractivos turísticos de Eje Cafetero en Colombia.">
+  <article>
+    <header class="article-hero container">
+      <a class="back-link" href={base}>← Volver al inicio</a>
+      <span class="eyebrow">NATURALEZA Y TRADICIÓN</span>
+      <h1>Eje Cafetero: entre montañas y tradición</h1>
+      <p>Un recorrido por los paisajes, experiencias y tradiciones que hacen especial a este destino colombiano.</p>
+    </header>
+    <div class="container article-photo"><img src={`${base}img/eje-cafetero.jpg`} alt="Paisaje de Eje Cafetero, Colombia" /></div>
+    <div class="article-body container">
+    <section><h2>Un paisaje que cuenta historias</h2><p>El Eje Cafetero, en el centro-occidente de Colombia, reúne montañas, pequeños pueblos y una larga tradición alrededor del cultivo del café. Los paisajes verdes y las fincas cafeteras forman parte de su identidad cultural.</p></section>
+    <section><h2>Salento y el Valle del Cocora</h2><p>Salento es conocido por sus calles coloridas y su arquitectura tradicional. Desde allí se puede visitar el Valle del Cocora, donde destacan las altas palmas de cera, símbolo natural de Colombia. Caminar por sus senderos permite apreciar los paisajes andinos.</p></section>
+    <section><h2>Experiencias para disfrutar</h2><p>Una visita a una finca cafetera permite conocer el proceso de producción del café. También es recomendable recorrer plazas y mercados locales, probar platos de la región y dedicar tiempo a observar el paisaje. Llevar ropa para la lluvia es conveniente, pues el clima puede cambiar durante el día.</p></section>
+      <a class="back-link bottom-link" href={base}>← Explorar otros destinos</a>
+    </div>
+  </article>
+</BaseLayout>

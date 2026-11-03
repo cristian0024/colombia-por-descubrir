@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="San Andrés" description="Descubre los atractivos turísticos de San Andrés en Colombia.">
+  <article>
+    <header class="article-hero container">
+      <a class="back-link" href={base}>← Volver al inicio</a>
+      <span class="eyebrow">SOL Y MAR</span>
+      <h1>San Andrés: el encanto del mar de siete colores</h1>
+      <p>Un recorrido por los paisajes, experiencias y tradiciones que hacen especial a este destino colombiano.</p>
+    </header>
+    <div class="container article-photo"><img src={`${base}img/san-andres.jpg`} alt="Paisaje de San Andrés, Colombia" /></div>
+    <div class="article-body container">
+    <section><h2>Una isla en el Caribe</h2><p>San Andrés es una isla colombiana situada en el mar Caribe. Sus aguas de diferentes tonos de azul y verde, conocidas popularmente como el mar de siete colores, son uno de sus principales atractivos.</p></section>
+    <section><h2>Playas y actividades</h2><p>Las playas invitan a descansar y disfrutar del paisaje. Entre las actividades habituales se encuentran el esnórquel y los recorridos por sectores costeros. Es importante seguir las indicaciones locales para proteger los arrecifes y otros ecosistemas marinos.</p></section>
+    <section><h2>Identidad y consejos de viaje</h2><p>La cultura raizal forma parte esencial de la identidad del archipiélago y se refleja en sus tradiciones, música y gastronomía. Antes de viajar, conviene consultar los requisitos de ingreso vigentes, las condiciones del mar y las normas ambientales para disfrutar de una visita responsable.</p></section>
+      <a class="back-link bottom-link" href={base}>← Explorar otros destinos</a>
+    </div>
+  </article>
+</BaseLayout>
